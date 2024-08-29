@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +12,77 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+font-family: Impact,
+Haettenschweiler,
+'Arial Narrow Bold',
+sans-serif;
+
+table * {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+table th {
+
+  background-color: navy;
+  color: #FFF;
+  font-weight: 300;
+
+}
+
+table th,
+table td {
+  text-align: center;
+  padding: 10px 5px
+}
+
+table button {
+  border: 1px solid green;
+  border-radius: 25px;
+  padding: 5px;
+  outline: 0;
+  background: #f3f3f3;
+}
+
+table button svg {
+  color: green;
+}
+
+table button:hover {
+  background: green;
+  color: #fff;
+  cursor: pointer;
+}
+
+table button:hover svg {
+  color: white;
+}
+
+table tr:nth-child(odd) {
+  background: #CAF0F8;
+}
+
+input {
+  border: 1px solid #CAF0F8;
+  outline: 0;
+  border-radius: 25px;
+  padding: 15px 10px;
+}
+
+#btn-cancelar svg {
+  color: red;
 }
