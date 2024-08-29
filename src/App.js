@@ -66,60 +66,60 @@ function App() {
 
   return (
     <div>
-      <h1>Por favor <b>leer</b> Selecciona un Regalo👶 <br> Recuerda que sólo puedes escoger UN regalo <br> No se pueden deshacer los cambios.  ​</h1>
-        {productoSeleccionado ? (
-          <table>
-            <tr >
-              <td colSpan={2}>
-                <h2>Has seleccionado: {productoSeleccionado.producto}</h2>
-                <br />
-                <input
-                  type="email"
-                  placeholder="Ingresa tu correo electrónico"
-                  value={correoUsuario}
-                  onChange={e => setCorreoUsuario(e.target.value)}
-                  disabled={deshabilitado}
-                />
+      <h1>Por favor <b>leer</b> Selecciona un Regalo👶 <br /> Recuerda que sólo puedes escoger UN regalo <br /> No se pueden deshacer los cambios.  ​</h1>
+      {productoSeleccionado ? (
+        <table>
+          <tr >
+            <td colSpan={2}>
+              <h2>Has seleccionado: {productoSeleccionado.producto}</h2>
+              <br />
+              <input
+                type="email"
+                placeholder="Ingresa tu correo electrónico"
+                value={correoUsuario}
+                onChange={e => setCorreoUsuario(e.target.value)}
+                disabled={deshabilitado}
+              />
 
-              </td>
+            </td>
 
-            </tr>
-            <tr>
+          </tr>
+          <tr>
+            <td>
+              <button onClick={handleConfirmar} disabled={deshabilitado}>
+                <FontAwesomeIcon icon={faCheckCircle} /> Confirmar Selección
+              </button>
+            </td>
+            <td>
+              <button id='btn-cancelar' onClick={() => setProductoSeleccionado(null)} disabled={deshabilitado}>
+                <FontAwesomeIcon icon={faTimesCircle} /> Cancelar
+              </button>
+            </td>
+          </tr>
+
+
+
+        </table>
+      ) : (
+        <table>
+          <thead>
+            <th>Regalo</th>
+            <th>Escoge presionando el botón "Seleccionar"</th>
+          </thead>
+          {productos.map((producto) => (
+            <tr key={producto.id}>
+              <td>{producto.producto}</td>
               <td>
-                <button onClick={handleConfirmar} disabled={deshabilitado}>
-                  <FontAwesomeIcon icon={faCheckCircle} /> Confirmar Selección
+                <button onClick={() => handleSeleccionar(producto)} disabled={deshabilitado}>
+                  <FontAwesomeIcon icon={faCheckCircle} /> Seleccionar
                 </button>
               </td>
-              <td>
-                <button id='btn-cancelar' onClick={() => setProductoSeleccionado(null)} disabled={deshabilitado}>
-                  <FontAwesomeIcon icon={faTimesCircle} /> Cancelar
-                </button>
-              </td>
             </tr>
-
-
-
-          </table>
-        ) : (
-          <table>
-            <thead>
-              <th>Regalo</th>
-              <th>Escoge presionando el botón "Seleccionar"</th>
-            </thead>
-            {productos.map((producto) => (
-              <tr key={producto.id}>
-                <td>{producto.producto}</td>
-                <td>
-                  <button onClick={() => handleSeleccionar(producto)} disabled={deshabilitado}>
-                    <FontAwesomeIcon icon={faCheckCircle} /> Seleccionar
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </table>
-        )}
-      </div>
-        );
+          ))}
+        </table>
+      )}
+    </div>
+  );
 }
 
-        export default App;
+export default App;
