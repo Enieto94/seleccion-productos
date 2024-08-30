@@ -30,7 +30,7 @@ function App() {
       Swal.fire({
         icon: 'error',
         title: 'Error',
-        text: 'Por favor, ingresa tu dirección de correo electrónico.',
+        text: 'Por favor, ingresa tu nombre.',
       });
       return;
     }
@@ -75,7 +75,7 @@ function App() {
               <br />
               <input
                 type="email"
-                placeholder="Ingresa tu correo electrónico"
+                placeholder="Ingresa tu nombre"
                 value={correoUsuario}
                 onChange={e => setCorreoUsuario(e.target.value)}
                 disabled={deshabilitado}
