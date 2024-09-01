@@ -66,7 +66,7 @@ function App() {
 
   return (
     <div>
-      <h1>Por favor <b>leer</b> Selecciona un Regalo👶 <br /> Recuerda que sólo puedes escoger UN regalo <br /> No se pueden deshacer los cambios.  ​</h1>
+      <h1>Por favor selecciona tu regalo👶 <br /> recuerda que sólo puedes elegir una vez y no se pueden hacer cambios.  ​</h1>
       {productoSeleccionado ? (
         <table>
           <tr >
